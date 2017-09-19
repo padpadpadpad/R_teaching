@@ -39,7 +39,7 @@ ggplot(prog_use, aes(forcats::fct_reorder(program, n, .desc = TRUE), n, fill = p
   xlab('') +
   ylab('Number of responses') +
   theme_bw(base_size = 12, base_family = 'Helvetica') +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+  theme(axis.text.x = element_text(angle = 335, hjust = 0, size = 8),
         legend.text = element_text(size = 8),
         legend.title = element_blank()) +
   labs(title = 'Programs used for data analysis by the labgroup!') +
@@ -110,7 +110,7 @@ ggplot(pkg_used, aes(forcats::fct_reorder(used, n, .desc = TRUE), n, fill = used
   xlab('') +
   ylab('Number of responses') +
   theme_bw(base_size = 12, base_family = 'Helvetica') +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+  theme(axis.text.x = element_text(angle = 335, hjust = 0, size = 8),
         legend.text = element_text(size = 8),
         legend.title = element_blank()) +
   labs(title = 'What packages have you used') +
@@ -133,7 +133,7 @@ ggplot(pkg_fave, aes(forcats::fct_reorder(fave, n, .desc = TRUE), n, fill = fave
   xlab('') +
   ylab('Number of responses') +
   theme_bw(base_size = 12, base_family = 'Helvetica') +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+  theme(axis.text.x = element_text(angle = 335, hjust = 0, size = 8),
         legend.text = element_text(size = 8),
         legend.title = element_blank()) +
   labs(title = 'What are your favourite packages?') +
@@ -157,7 +157,7 @@ ggplot(curr_use, aes(forcats::fct_reorder(use, n, .desc = TRUE), n, fill = use))
   xlab('') +
   ylab('Number of responses') +
   theme_bw(base_size = 12, base_family = 'Helvetica') +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+  theme(axis.text.x = element_text(angle = 335, hjust = 0, size = 8),
         legend.text = element_text(size = 8),
         legend.title = element_blank()) +
   labs(title = 'What do we currently use R for?') +
