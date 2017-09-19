@@ -12,7 +12,7 @@ library(palettetown)
 x <- drive_find(n_max = 10, type = c("spreadsheet", "jpg"))
 
 # download file of responses
-d_use <- drive_download(as_id('1pXwZPANwn2RaWgJNXrEzSNIscEoaq1Zf60lZej8ohq4'), path = file.path('R_form', 'R_responses.csv'), type = 'csv')
+d_use <- drive_download(as_id('1pXwZPANwn2RaWgJNXrEzSNIscEoaq1Zf60lZej8ohq4'), path = file.path('R_form', 'R_responses.csv'), type = 'csv', overwrite = TRUE)
 
 # load in data
 d_use <- read.csv(file.path('R_form', 'R_responses.csv'), stringsAsFactors = FALSE)
@@ -41,7 +41,8 @@ ggplot(prog_use, aes(forcats::fct_reorder(program, n, .desc = TRUE), n, fill = p
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
         legend.text = element_text(size = 8),
         legend.title = element_blank()) +
-  labs(title = 'Programs used for data analysis by the labgroup!')
+  labs(title = 'Programs used for data analysis by the labgroup!') +
+  scale_y_continuous(breaks = scales::pretty_breaks())
 
 ggsave(file.path('R_form', 'prog_use.pdf'), last_plot(), width = 5.5, height = 5)
 ggsave(file.path('R_form', 'prog_use.png'), last_plot(), width = 5.5, height = 5)
@@ -71,3 +72,11 @@ ggplot(R_prof, aes(program, exp, col = program, fill = program)) +
 
 ggsave(file.path('R_form', 'Experience_using_R.pdf'), last_plot(), width = 5.25, height = 4.25)
 ggsave(file.path('R_form', 'Experience_using_R.png'), last_plot(), width = 5.25, height = 4.25)
+
+# look at what people want to learn ####
+
+
+# Used packages ####
+
+# Packages used ####
+
