@@ -88,14 +88,14 @@ ggplot(learn, aes(forcats::fct_reorder(hopes, n, .desc = TRUE), n, fill = hopes)
   xlab('') +
   ylab('Number of responses') +
   theme_bw(base_size = 12, base_family = 'Helvetica') +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
-        legend.text = element_text(size = 8),
+  theme(axis.text.x = element_text(angle = 335, hjust = 0, size = 8),
+        legend.text = element_text(size = 6),
         legend.title = element_blank()) +
   labs(title = 'What do we want to learn in our R sessions!') +
   scale_y_continuous(breaks = scales::pretty_breaks())
 
-ggsave(file.path('R_form', 'what_to_learn.pdf'), last_plot(), width = 5.5, height = 5)
-ggsave(file.path('R_form', 'what_to_learn.png'), last_plot(), width = 5.5, height = 5)
+ggsave(file.path('R_form', 'what_to_learn.pdf'), last_plot(), width = 8, height = 5)
+ggsave(file.path('R_form', 'what_to_learn.png'), last_plot(), width = 8, height = 5)
 
 # Used packages ####
 pkg_used <- select(d_use, pkg_used, name) %>%
