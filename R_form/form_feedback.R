@@ -121,7 +121,7 @@ ggsave(file.path('R_form', 'pkgs_used.png'), last_plot(), width = 5.5, height = 
 
 # Favourite packages ####
 pkg_fave <- select(d_use, fave_pkgs, name) %>%
-  mutate(., fave_pkgs = str_replace_all(fixed(fave_pkgs), c('Ggplot2' = 'ggplot2', 'ggplot' = 'ggplot2', 'ddply' = 'plyr'))) %>%
+  mutate(., fave_pkgs = str_replace_all(stringr::fixed(fave_pkgs), c('Ggplot2' = 'ggplot2', 'ggplot,' = 'ggplot2,', 'ddply' = 'plyr'))) %>%
   mutate(., fave = strsplit(.$fave_pkgs, ',')) %>%
   unnest(., fave) %>%
   mutate(., fave = trimws(fave)) %>%
